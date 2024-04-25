@@ -1,0 +1,69 @@
+<head>
+    <style>
+        html {
+        background-color: #e4e9fd;
+        background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+        min-height: 1000px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        }
+
+        #addUserForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+        height: 150px;
+        padding: 50px;
+
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+        background-color: #a683e3;
+        }
+
+        #name {
+        padding: 10px;
+        border: 0;
+        border-radius: 5px;
+        height: 30px;
+        background-color: #e4e9fd;
+        text-align: center;
+        outline: 2px solid #fff;
+        }
+
+        #addUserForm > input[type="submit"] {
+        padding: 10px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: #FB9AD1;
+        color: #fff;
+
+        transition: all 200ms ease-in-out;
+        }
+
+        #addUserForm > input[type="submit"]:hover {
+        background-color: #fff;
+        color: #FB9AD1;
+        }
+
+        label[for="name"] {
+        color: #fff;
+        margin-bottom: 40px;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="/user/add" method="post" id="addUserForm">
+        <label for="name"><%= sentence %></label>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>

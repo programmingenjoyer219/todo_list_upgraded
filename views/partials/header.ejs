@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permalist</title>
+  <style>
+  html {
+    background-color: #e4e9fd;
+    min-height: 100vh;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  #daily-background {
+    background-image: -webkit-linear-gradient(65deg, #5BBCFF 50%, #e4e9fd 50%);
+  }
+  #daily-background-color {
+    background-color: #5BBCFF;
+  }
+  #weekly-background {
+    background-image: -webkit-linear-gradient(65deg, #4CCD99 50%, #e4e9fd 50%); 
+  }
+  #weekly-background-color {
+    background-color: #4CCD99;
+  }
+  #monthly-background {
+    background-image: -webkit-linear-gradient(65deg, #FFC700 50%, #e4e9fd 50%);
+  }
+  #monthly-background-color {
+    background-color: #FFC700;
+  }
+  #yearly-background {
+    background-image: -webkit-linear-gradient(65deg, #FA7070 50%, #e4e9fd 50%);
+  }
+  #yearly-background-color {
+    background-color: #FA7070;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 95vh;
+  }
+  main {
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  h1 {
+    color: #fff;
+    padding: 10px;
+  }
+
+  .box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  #heading {
+    background-color: #a683e3;
+    text-align: center;
+  }
+  form.edit {
+    display: flex;
+  }
+
+  .item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .item:last-child {
+    border-bottom: 0;
+  }
+
+  input[type="checkbox"] {
+    margin: 20px;
+    margin-left: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 20px;
+    color: #00204a;
+  }
+
+  form {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  button.add {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #a683e3;
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+    transition: all 200ms;
+  }
+
+  button.add:hover {
+    opacity: 60%;
+  }
+
+  button.edit {
+    margin-left: 0px;
+    margin-right: 20px;
+    border: none;
+    background: none;
+  }
+
+  .icon {
+    height: 20px;
+  }
+
+  input[type="text"] {
+    text-align: left;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 80%;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #a683e3;
+  }
+
+  ::placeholder {
+    color: lightgray;
+    opacity: 1;
+  }
+
+  footer {
+    flex: 0 0 auto;
+    color: white;
+    text-align: center;
+  }
+
+  .user, #addUserButton {
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #a683e3;
+    color: #fff;
+    transition: all 200ms ease-in-out;
+  }
+
+  .user:hover {
+    background-color: #fff;
+    border: 2px solid #a683e3;
+    color: #a683e3;
+  }
+
+  #addUserButton {
+    background-color: #FB9AD1;
+  }
+
+  #addUserButton:hover {
+    background-color: #fff;
+    border: 2px solid #FB9AD1;
+    color: #FB9AD1;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.75rem;
+  }
+
+  #endpoint-container > a > button {
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 200ms ease-in-out;
+  }
+
+  #endpoint-container > a > button:hover {
+    background-color: #fff;
+  }
+
+  #daily-button {
+    background-color: #5BBCFF;
+  }
+
+  #daily-button:hover {
+    border: 2px solid #5BBCFF;
+    color: #5BBCFF;
+  }
+
+  #weekly-button {
+    background-color: #4CCD99;
+  }
+
+  #weekly-button:hover {
+    border: 2px solid #4CCD99;
+    color: #4CCD99;
+  }
+
+  #monthly-button {
+    background-color: #FFC700;
+  }
+
+  #monthly-button:hover {
+    border: 2px solid #FFC700;
+    color: #FFC700;
+  }
+
+  #yearly-button {
+    background-color: #FA7070;
+  }
+
+  #yearly-button:hover {
+    border: 2px solid #FA7070;
+    color: #FA7070;
+  }
+
+  </style>
+</head>
+
+<body>
+  <main>
+ 
