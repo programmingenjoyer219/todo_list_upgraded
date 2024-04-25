@@ -1,6 +1,8 @@
 # todo_list_upgraded
 I have added the following features to the TODO list:
+
   -> You can add family members
+  
   -> You can use different types of TODO lists like daily, weekly, monthly and yearly.
 
 The Database schema looks something like this:
